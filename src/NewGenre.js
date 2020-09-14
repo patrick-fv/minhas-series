@@ -7,7 +7,6 @@ const NewGenre = () => {
     const [success, setSuccess] = useState(false)
     const onChange = (event) => {
         setName(event.target.value)
-        console.log(name)
     }
     const save = () => {
         axios.post('/api/genres', {
@@ -23,6 +22,7 @@ const NewGenre = () => {
     
     return (
         <div className='container'>
+        <h1>Novo Genêro</h1>
             <form>
                 <div class='form-group'>
                     <label htmlfor='name'>Nome</label>

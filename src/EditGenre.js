@@ -28,6 +28,7 @@ const EditGenre = ({ match }) => {
     }
     return (
         <div className='container'>
+        <h1>Editar Genêro</h1>
             <form>
                 <div class='form-group'>
                     <label htmlfor='name'>Nome</label>

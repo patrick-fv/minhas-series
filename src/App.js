@@ -18,10 +18,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className='App'>
-        <Header />
-        <Route path='/generos' exact component={Genres} />
-        <Route path='/generos/novo' component={NewGenre} />
-        <Route path='/generos/:id' component={EditGenre} />
+      <Header/>
+      <Route path='/generos' exact component={Genres} />
+      <Route path='/generos/novo' exact component={NewGenre} />
+      <Route path='/generos/id=:id' exact component={EditGenre} />
       </div>
     </BrowserRouter>
   )
