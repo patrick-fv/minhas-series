@@ -17,7 +17,7 @@ const Genres = () => {
                 <td>{record.name}</td>
                 <td>
                     <button className='btn btn-danger' onClick={() => deleteGenre(record.id)}>Remover</button>
-                    <Link className='btn btn-warning' to={'/generos/id='+record.id} style={{marginLeft: 5}}>Editar</Link>    
+                    <Link className='btn btn-warning' to={'/generos/'+record.id} style={{marginLeft: 5}}>Editar</Link>    
                 </td>
             </tr>
         )
