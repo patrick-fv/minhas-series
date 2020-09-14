@@ -1,21 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Genres = () => {
     const [data, setData] = useState([])
+    const deleteGenre = (id) => {
+        axios.delete('api/genres/'+id)
+        .then((res) => {
+            setData(data.filter(item => item.id !== id))
+        })
+    }
     const renderLine = (record) => {
         return (
             <tr key={record.id}>
                 <th scope='row'>{record.id}</th>
                 <td>{record.name}</td>
-                <td><button>+</button></td>
+                <td>
+                    <button className='btn btn-danger' onClick={() => deleteGenre(record.id)}>Remover</button>
+                    <Link to={'/generos/'+record.id}>Editar</Link>    
+                </td>
             </tr>
         )
     }
     useEffect(() => {
         axios.get('/api/genres')
         .then((res) => {
-            //setData(res.data.data)
+            setData(res.data.data)
         })
     }, [])
 

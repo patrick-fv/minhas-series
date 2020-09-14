@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Header from './Header'
 import Genres from './Genres'
+import NewGenre from './NewGenre'
+import EditGenre from './EditGenre'
 import axios from 'axios'
 
 const App = () => {
@@ -17,7 +19,9 @@ const App = () => {
     <BrowserRouter>
       <div className='App'>
         <Header />
-        <Route path='/generos' exact component={Genres}/>
+        <Route path='/generos' exact component={Genres} />
+        <Route path='/generos/novo' component={NewGenre} />
+        <Route path='/generos/:id' component={EditGenre} />
       </div>
     </BrowserRouter>
   )
