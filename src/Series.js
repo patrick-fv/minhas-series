@@ -32,7 +32,7 @@ const Series = () => {
     if(data.length === 0) {
         return (
             <div>
-            <Link style={{margin: 5}} type='button' class='btn btn-primary' to='/series/novo'>Nova Série</Link>
+            <Link style={{marginBottom: 5}} type='button' class='btn btn-primary' to='/series/novo'>Nova Série</Link>
             <div class="alert alert-warning" role="alert">
                 Você não possui Séries criadas!
             </div>
@@ -43,7 +43,7 @@ const Series = () => {
     return (
         <div>
         <h1>Séries</h1>
-        <Link style={{margin: 5}} type='button' class='btn btn-primary' to='/series/novo'>Nova Série</Link>
+        <Link style={{marginBottom: 5}} type='button' class='btn btn-primary' to='/series/novo'>Nova Série</Link>
         <table className='table table-dark'>
             <thead>
                 <tr>
