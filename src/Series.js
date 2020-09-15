@@ -17,13 +17,13 @@ const Series = () => {
                 <td>{record.name}</td>
                 <td>
                     <button className='btn btn-danger' onClick={() => deleteGenre(record.id)}>Remover</button>
-                    <Link className='btn btn-warning' to={'/generos/'+record.id} style={{marginLeft: 5}}>Editar</Link>    
+                    <Link className='btn btn-warning' to={'/series/'+record.id} style={{marginLeft: 5}}>Editar</Link>    
                 </td>
             </tr>
         )
     }
     useEffect(() => {
-        axios.get('/api/genres')
+        axios.get('/api/series')
         .then((res) => {
             setData(res.data.data)
         })
@@ -32,9 +32,9 @@ const Series = () => {
     if(data.length === 0) {
         return (
             <div>
-            <Link style={{margin: 5}} type='button' class='btn btn-primary' to='/generos/novo'>Novo Genêro</Link>
+            <Link style={{margin: 5}} type='button' class='btn btn-primary' to='/series/novo'>Nova Série</Link>
             <div class="alert alert-warning" role="alert">
-                Você não possui genêros criados!
+                Você não possui Séries criadas!
             </div>
             </div>
         )
@@ -42,8 +42,8 @@ const Series = () => {
 
     return (
         <div>
-        <h1>Série</h1>
-        <Link style={{margin: 5}} type='button' class='btn btn-primary' to='/generos/novo'>Nova Série</Link>
+        <h1>Séries</h1>
+        <Link style={{margin: 5}} type='button' class='btn btn-primary' to='/series/novo'>Nova Série</Link>
         <table className='table table-dark'>
             <thead>
                 <tr>

@@ -9,7 +9,7 @@ const NewSerie = () => {
         setName(event.target.value)
     }
     const save = () => {
-        axios.post('/api/genres', {
+        axios.post('/api/series', {
             name,
         })
         .then((res) => {
@@ -17,16 +17,16 @@ const NewSerie = () => {
         })
     }
     if(success) {
-        return <Redirect to='/generos' />
+        return <Redirect to='/series' />
     }
     
     return (
         <div className='container'>
-        <h1>Novo Genêro</h1>
+        <h1>Nova Série</h1>
             <form>
                 <div class='form-group'>
                     <label htmlfor='name'>Nome</label>
-                    <input type='text' value={name} {...{onChange}} class='form-control' id='name' aria-describedby='emailHelp' placeholder='nome do genêro'/>
+                    <input type='text' value={name} {...{onChange}} class='form-control' id='name' aria-describedby='emailHelp' placeholder='nome da série'/>
                 </div>
                 <button onClick={save} type='button' className='btn btn-primary'>Salvar</button>
             </form>
