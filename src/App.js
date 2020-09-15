@@ -14,8 +14,8 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div>
-        <Header/>
+    <Header/>
+      <div className='container'>
         <Switch>
           <Route path='/generos' exact component={Genres} />
           <Route path='/generos/novo' component={NewGenre} />
