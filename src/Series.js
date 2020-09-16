@@ -31,7 +31,7 @@ const Series = () => {
 
     if(data.length === 0) {
         return (
-            <div className='container'>
+            <div>
                 <Link style={{marginBottom: 5}} type='button' className='btn btn-primary' to='/series/novo'>Nova Série</Link>
                 <div className="alert alert-warning" role="alert">
                     Você não possui Séries criadas!

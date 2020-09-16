@@ -32,8 +32,8 @@ const Genres = () => {
     if(data.length === 0) {
         return (
             <div className='container'>
-                <Link style={{marginBottom: 5}} type='button' class='btn btn-primary' to='/generos/novo'>Novo Genêro</Link>
-                <div class="alert alert-warning" role="alert">
+                <Link style={{marginBottom: 5}} type='button' className='btn btn-primary' to='/generos/novo'>Novo Genêro</Link>
+                <div className="alert alert-warning" role="alert">
                     Você não possui genêros criados!
                 </div>
             </div>
@@ -43,7 +43,7 @@ const Genres = () => {
     return (
         <div className='container'>
             <h1>Genêro</h1>
-            <Link style={{marginBottom: 5}} type='button' class='btn btn-primary' to='/generos/novo'>Novo Genêro</Link>
+            <Link style={{marginBottom: 5}} type='button' className='btn btn-primary' to='/generos/novo'>Novo Genêro</Link>
             <table className='table table-dark'>
                 <thead>
                     <tr>

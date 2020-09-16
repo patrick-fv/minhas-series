@@ -7,7 +7,7 @@ const InfoSerie = ({ match }) => {
     const [form, setForm] = useState({})
     const [success, setSuccess] = useState(false)
     const [data, setData] = useState({})
-    const [mode, setMode] = useState('EDIT')
+    const [mode, setMode] = useState('INFO')
     const [genres, setGenres] = useState([])
     const [genreId, setGenreId] = useState('')
 
@@ -16,18 +16,19 @@ const InfoSerie = ({ match }) => {
             .then(res => {
                 setData(res.data)
                 setForm(res.data)
-            })
-        }, [match.params.id])
-        useEffect(() => {        
-            axios.get('/api/genres/')
+        })
+    }, [match.params.id])
+
+    useEffect(() => {        
+        axios.get('/api/genres/')
             .then(res => {
                 const genresCache = res.data.data
                 setGenres(genresCache)
                 const find = genresCache.find(value => data.genre === value.name)
                 
                 if(find) setGenreId(find.id)
-            })
-        }, [data.genre])
+        })
+    }, [data.genre])
     
     const onChange = field => event => {
         if(field === 'genre') {
@@ -65,9 +66,9 @@ const InfoSerie = ({ match }) => {
     }
     
     if(success) {
-        return <Redirect to={'/series/'+data.id} />
+        return <Redirect to={'/series/'} />
     }
-
+    
     return (
         <div>
             <header style={masterHeader}>
@@ -81,15 +82,16 @@ const InfoSerie = ({ match }) => {
                                 <h1 className='text-white font-weight-light'>{data.name}</h1>
                                 <div className='lead text-white'>
                                     { (data.status === 'ASSISTIDO') ? (<Badge color='success' style={{margin: 5}}>Assistido</Badge>) : (<Badge color='warning' style={{margin: 5}}>Assistir</Badge>) }
-                                    Genêro: { data.genre }
+                                    Genêro: { data.genre } <br/>
+                                    Comentários: { data.comments }
                                 </div>
                              </div>
                         </div>
                     </div>
                 </div>
             </header>
-            <div>
-                <button className='btn btn-primary' onClick={() => setMode('EDIT')}>Editar</button>
+            <div className='container'>
+                <button className='btn btn-primary' onClick={() => setMode('EDIT')} style={{ margin: 5 }}>Editar</button>
             </div>
             {   (mode === 'EDIT') &&
                 <div className='container'>
@@ -115,13 +117,13 @@ const InfoSerie = ({ match }) => {
                         </div>
 
                         <div className='form-check'>
-                            <input className='form-check-input' type="radio" name='exampleRadios' id='exampleRadios1' value='assistido' onClick={select('ASSISTIDO')}/>
+                            <input defaultChecked className='form-check-input' type="radio" name='exampleRadios' id='exampleRadios1' value='assistido' onClick={select('ASSISTIDO')}/>
                             <label className='form-check-label' htmlFor='assistido'>
                                 Assistido
                             </label>
                         </div>
                         <div className='form-check'>
-                            <input className='form-check-input' type='radio' name='exampleRadios' id='exampleRadios2' value='paraAssistir' onClick={select('ASSISTIR')}/>
+                            <input defaultChecked={(data.status === 'ASSISTIR')} className='form-check-input' type='radio' name='exampleRadios' id='exampleRadios2' value='paraAssistir' onClick={select('ASSISTIR')}/>
                             <label className='form-check-label' htmlFor='paraAssistir'>
                                 Para Assistir
                             </label>
