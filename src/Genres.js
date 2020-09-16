@@ -31,31 +31,31 @@ const Genres = () => {
 
     if(data.length === 0) {
         return (
-            <div>
-            <Link style={{marginBottom: 5}} type='button' class='btn btn-primary' to='/generos/novo'>Novo Genêro</Link>
-            <div class="alert alert-warning" role="alert">
-                Você não possui genêros criados!
-            </div>
+            <div className='container'>
+                <Link style={{marginBottom: 5}} type='button' class='btn btn-primary' to='/generos/novo'>Novo Genêro</Link>
+                <div class="alert alert-warning" role="alert">
+                    Você não possui genêros criados!
+                </div>
             </div>
         )
     }
 
     return (
-        <div>
-        <h1>Genêro</h1>
-        <Link style={{marginBottom: 5}} type='button' class='btn btn-primary' to='/generos/novo'>Novo Genêro</Link>
-        <table className='table table-dark'>
-            <thead>
-                <tr>
-                    <th scope='col'>ID</th>
-                    <th scope='col'>Nome</th>
-                    <th scope='col'>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                {data.map(renderLine)}
-            </tbody>
-        </table>
+        <div className='container'>
+            <h1>Genêro</h1>
+            <Link style={{marginBottom: 5}} type='button' class='btn btn-primary' to='/generos/novo'>Novo Genêro</Link>
+            <table className='table table-dark'>
+                <thead>
+                    <tr>
+                        <th scope='col'>ID</th>
+                        <th scope='col'>Nome</th>
+                        <th scope='col'>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map(renderLine)}
+                </tbody>
+            </table>
         </div>
     )
 }

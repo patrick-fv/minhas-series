@@ -11,13 +11,22 @@ import {
   Route,
   Switch } from 'react-router-dom'
 
+const Home = () => {
+  return (
+    <div className='container'>
+      <h1>Home</h1>
+    </div>
+  ) 
+}
+
 const App = () => {
 
   return (
     <BrowserRouter>
     <Header/>
-      <div className='container'>
+      <div>
         <Switch>
+          <Route path='/' exact component={Home} />
           <Route path='/generos' exact component={Genres} />
           <Route path='/generos/novo' component={NewGenre} />
           <Route path='/generos/:id' component={EditGenre} />

@@ -24,7 +24,7 @@ const NewGenre = () => {
         <div className='container'>
         <h1>Novo Genêro</h1>
             <form>
-                <div class='form-group'>
+                <div className='form-group'>
                     <label htmlfor='name'>Nome</label>
                     <input type='text' value={name} {...{onChange}} class='form-control' id='name' aria-describedby='emailHelp' placeholder='nome do genêro'/>
                 </div>
