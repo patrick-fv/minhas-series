@@ -11,6 +11,23 @@ const HeaderHome = () => {
   )
 }
 
+const Card = ({ logo, title, info, link }) => {
+  return (
+    <div className='col-lg-3 col-md-6 mb-4'>
+      <div className='card h-100'>
+        <img className='card-img-top' src={logo} alt=''/>
+        <div className='card-body'>
+          <h4 className='card-title'>{title}</h4>
+          <p className='card-text'>{info}</p>
+        </div>
+        <div className='card-footer'>
+          <a className='btn btn-primary' href={link}>Ver Mais</a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const Home = () => {
   return (
     <div className='container'>
