@@ -33,7 +33,7 @@ const HeaderHome = () => {
       <p className='lead'>
         Projeto direto do curso devReactJS da DevPleno, onde coloco em prática meus estudos do curso com tecnologias de front-end como React, Bootstrap e Reactstrap, tudo com JavaScript. 
       </p>
-      <a className='btn btn-primary btn-lg' href='https://devpleno.com/'>DevPleno</a>
+      <a className='btn btn-primary btn-lg' href='https://devpleno.com/'>Acesse DevPleno</a>
     </header>
   )
 }
