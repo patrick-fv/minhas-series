@@ -44,7 +44,7 @@ const Genres = () => {
         <div className='container'>
             <h1>Genêro</h1>
             <Link style={{marginBottom: 5}} type='button' className='btn btn-primary' to='/generos/novo'>Novo Genêro</Link>
-            <table className='table table-dark'>
+            <table className='table jumbotron'>
                 <thead>
                     <tr>
                         <th scope='col'>ID</th>

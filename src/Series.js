@@ -44,7 +44,7 @@ const Series = () => {
         <div className='container'>
         <h1>Séries</h1>
         <Link style={{marginBottom: 5}} type='button' className='btn btn-primary' to='/series/novo'>Nova Série</Link>
-        <table className='table table-dark'>
+        <table className='table jumbotron'>
             <thead>
                 <tr>
                     <th scope='col'>ID</th>

@@ -17,7 +17,7 @@ const Header = () => {
   
     return (
       <div>
-        <Navbar color='light' light expand='md'>
+        <Navbar color='dark navbar-dark bg-dark' light expand='md'>
           <div className='container'>
             <NavbarBrand tag={Link} to='/'>Minhas Séries</NavbarBrand>
             <NavbarToggler onClick={toggle}/>
