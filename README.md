@@ -1,6 +1,6 @@
 # Minhas Séries
 
-Projeto direto do curso devReactJS da DevPleno, onde coloco em prática meus estudos do curso com tecnologias de front-end como React, Bootstrap e Reactstrap, tudo com JavaScript.
+Projeto do curso devReactJS, onde coloco em prática meus estudos do curso com tecnologias de front-end como React(conceitos iniciais props, hooks, components), Bootstrap e Reactstrap, tudo com JavaScript.
 
 
 [![](./image/img2.png)]()
