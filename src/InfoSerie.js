@@ -75,7 +75,7 @@ const InfoSerie = ({ match }) => {
                 <div className='h-100' style={{background: 'rgba(0, 0, 0, 0.7)'}}>
                     <div className='h-100 container'>
                         <div className='row h-100 align-items-center'>
-                            <div className='col-4'>
+                            <div className='col-3'>
                                 <img className='img-fluid img-thumbnail' src={data.poster} alt={data.name}/>
                             </div>
                             <div className='col-8'>
