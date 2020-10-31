@@ -1,4 +1,4 @@
-# Minhas Séries
+# `Minhas Séries`
 
 Projeto do curso devReactJS, onde coloco em prática meus estudos do curso com tecnologias de front-end como React(conceitos iniciais props, hooks, components), Bootstrap e Reactstrap, tudo com JavaScript.
 
@@ -7,7 +7,7 @@ Projeto do curso devReactJS, onde coloco em prática meus estudos do curso com t
 
 [![](./image/img1.png)](https://github.com/patrick-fv/minhas-series/blob/master/image/img1.png?raw=true)
 
-# Instalação
+# `Instalar`
 
 `git clone https://github.com/patrick-fv/minhas-series.git`
 
